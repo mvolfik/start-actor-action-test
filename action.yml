@@ -1,0 +1,24 @@
+name: 'Start Apify Actor'
+description: 'Starts Apify Actor and adds a commit status marker with link to the run.'
+inputs:
+  actor-id:
+    description: 'ID of the Actor to start.'
+    required: false
+  task-id:
+    description: 'ID of the Actor task to start. Exactly one of actorId, taskId must be specified.'
+    required: false
+  apify-token:
+    description: 'Apify API token with permission to start the Actor/task.'
+    required: true
+  github-token:
+    description: 'GitHub API token with permission to write commit status markers in this repository.'
+    required: true
+  input-file:
+    description: 'Path to the file to be uploaded as input to the run. If not present, empty JSON object (`{}`) will be used.'
+    required: false
+outputs:
+  run-id:
+    description: 'ID of the started run.'
+runs:
+  using: 'node20'
+  main: 'index.js'
