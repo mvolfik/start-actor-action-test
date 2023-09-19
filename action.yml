@@ -21,4 +21,4 @@ outputs:
     description: 'ID of the started run.'
 runs:
   using: 'node20'
-  main: 'index.js'
+  main: 'dist/index.cjs'

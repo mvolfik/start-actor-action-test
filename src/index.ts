@@ -1,4 +1,4 @@
-import { readFile } from "fs/promises";
+import { readFile } from "node:fs/promises";
 
 import { ApifyClient } from "apify-client";
 import core from "@actions/core";
